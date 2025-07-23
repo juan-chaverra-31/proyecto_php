@@ -84,6 +84,86 @@
       <!-- Video Cristiano -->
   <section id="video" class="container text-center mb-5">
     <h2>Momentos Legendarios</h2>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ TABLA
+</button>
+
+   
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+     
+      <table class="table table-dark">
+
+      <?php
+include_once "controller/conexion.php";
+$conexion = new Conexion();
+$conexion = $conexion->conectar();
+if ($conexion){
+  $sql = "SELECT * FROM registropersonas";
+  $consulta = $conexion->prepare($sql);
+  $consulta->execute();
+  $i = 0;
+  while($fila = $consulta-> fetch (PDO::FETCH_ASSOC)){
+    $i += 1;
+  
+  
+
+?>
+   <thead>
+        
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">nombre</th>
+      <th scope="col">apellido</th>
+      <th scope="col">edad</th>
+      <th scope="col">correo</th>
+      <th scope="col">telefono</th>
+      <th scope="col">editar</th>
+      <th scope="col">eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+  
+    </tr>
+    
+  </tbody> 
+
+  <?php
+
+
+  }}
+  else {
+    echo "error al conectar la base de datos";
+  }
+
+  ?>
+</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
     <div class="ratio ratio-16x9">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ttDbSrXnCH4?si=orY7UWFEtjNT-ZJt" title="Cristiano" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
@@ -190,29 +270,6 @@
 <form>
 
  
-  <!-- Footer -->
-  <footer  class="navbar navbar-expand-lg navbar-dark bg-primary" style="background-color:#0000FF; color: white;">
-    Página creada por un fan de Cristiano © 2025
-  </footer>
-  
-<!-- Modal genérico -->
-<div class="modal fade" id="mensajeModal" tabindex="-1" aria-labelledby="mensajeModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="mensajeModalLabel">Resultado</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body" id="mensajeTexto">
-
-        <!-- Aquí va el mensaje dinámico -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/modal.js"></script>
