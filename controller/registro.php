@@ -26,7 +26,7 @@ if ($conexion) {
         $stmt->execute();
 
         header("Location: ../Index.php?mensaje=Correcto");
-        exit();
+        
         
     } catch (PDOException $e) {
         // Código de error 23000 = violación de restricción (clave duplicada, etc.)
