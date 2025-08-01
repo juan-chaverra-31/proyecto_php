@@ -3,6 +3,12 @@
     
 # project_Finaly_Censa
 
+# Página Web de Cristiano Ronaldo
+
+##### Este proyecto de sorfware es una pagina sobre el futbolista cristiano ronaldo desarrollado en la aplicacion VisuaL Studio code (VSC), la pagina en la parte superior cuenta con fotos destacadas de los momentos mas impoetantes que atenido cristiano ronaldo en su carrera, como el balon de oro, la eurocopa que gano con su seleccion en 2016, y su ultima champions que gano con el real madrid, equipo con el cual paso uno de sus mejores momentos como futbolista, la pagina en su pórttada tiene un video de las mejores jugadas y goles en el equipo que mas se dio a conocer que fue el manchester united de inglaterra, ademas de esto la pagina cuenta con un sistema de registro de usuarios la cual se almacena losa datos en My SQL admind, la session de registro se encuntra en la parte inferior de la pagina cuenta con la session de registro de usuarios, y en la parte superior del video se encuentra la session de tabla, en la cual se pueden ver la cantidad de usuarios que se han registrado, teniendo en cuenta que el usuario que compre este software al abbrir la session de la tabla de registro cuenta con la funcion de editar la informacion de los usuarios, y la funcion de eliminar un usuario.
+
+##### Los programas que se usaron para crear este softwarw fueron: Visual Studio Code en el cual se uso, HTML, PHP, Java Scrip, Xampp para el registro de los usuarios y githutb.
+
 
 Este proyecto es de la clase del jueves.php
 #base de datos
