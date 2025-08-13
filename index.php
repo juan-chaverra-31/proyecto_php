@@ -88,14 +88,13 @@ if ($conexion){
 
   <tbody>
     <tr>
-    <th scope="row"><?php $i ?></th>
-	 
+    <th scope="row"><?php echo $i ?></th>
    <td><?php echo $fila["Nombre"]; ?></td>
    <td><?php echo $fila["Apellido"]; ?></td>
    <td><?php echo $fila["Edad"]; ?></td>
    <td><?php echo $fila["Correo"]; ?></td>
    <td><?php echo $fila["Telefono"]; ?></td>
-   <td><a  href="update.php" type="button" class="btn btn-success"> editar </a></td>
+   <td><a href="update.php?id=<?php echo $fila["Id"]; ?>" type="button" class="btn btn-success"> editar </a></td>
    <td></td>
       
   
@@ -181,11 +180,7 @@ if ($conexion){
     <div class="container">
     <h3 class="text-center mb-4">Formulario Registro</h3>
  
-          <div class="row">
-            <div class="col">
-            <label for="Name" class="">ID</label>
-          <input type="text" class="form-control" id="Name" placeholder="Ingrese el id" name="id">
-            </div>
+          
             <div class="col">
             <label fot="Nombre" class="">Nombre</label>
           <input type="text" class="form-control" id="Name" placeholder="Ingrese el Nombre" name="nombre">
