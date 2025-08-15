@@ -45,7 +45,7 @@ if($con->RowCount() == 0 ){
         <h2>Actualizar Registro</h2>
         <!-- ... -->
 
-        <form action="controller/registro.php" method="POST">
+        <form action="controller/UpdateController.php" method="POST">
 
 <div class="container">
 <h3 class="text-center mb-4">Formulario Registro</h3>
@@ -67,7 +67,7 @@ if($con->RowCount() == 0 ){
     <div class="row">  
     <div class="col">
     <label fot="Cedula" class="Form-label">cedula</label>
-      <input type="text" class="form-control" id="Name" Value ="<?php echo htmlspecialchars($registro['Id'])?> " disabled name="id">
+      <input type="text" class="form-control" id="Name" Value ="<?php echo htmlspecialchars($registro['Id'])?> " readonly name="id">
     </div>
 
     <div class="col">
