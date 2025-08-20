@@ -15,16 +15,16 @@ if($conexion){
     $tel = $_POST['telefono'];
 
 
-    $CONSULTA = "UPDATE `registropersonas` SET 
-                                            `Id`='$id',
-                                            `Nombre`='$nombre',
-                                            `Apellido`='$apellido',
-                                            `Edad`=' $edad',
-                                            `Correo`=' $correo',
-                                            `Telefono`='$tel'
-                                             WHERE 1"
+    $CONSULTA = "UPDATE registropersonas SET 
+                                     
+                                            `Nombre`=:nombre,
+                                            `Apellido`=:apellido,
+                                            `Edad`= :edad,
+                                            `Correo`=:correo,
+                                            `Telefono`=:telefono
+                                             WHERE Id =:id";
 
-$stmt = $conexion->prepare($consulta);
+$stmt = $conexion->prepare($CONSULTA);
 $stmt->bindParam(':id', $id);
 $stmt->bindParam(':nombre', $nombre);
 $stmt->bindParam(':apellido', $apellido);
@@ -33,8 +33,7 @@ $stmt->bindParam(':correo', $correo);
 $stmt->bindParam(':telefono', $tel);
 $stmt->execute();
 
-    
-echo $id;
+header('Location:  ../index.php?Mensage=Correcto');
 }
 else{
     header('Location:  ../index.php');
